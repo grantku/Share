@@ -1,3 +1,5 @@
+// this file for test github //
+
 #include<stdio.h>
 #include<stdlib.h>
 struct rec
@@ -13,7 +15,7 @@ struct rec *insert(struct rec *head,int data)
               head = (struct rec*)malloc(sizeof(struct rec));
               head->value=data;
               head->next=NULL;
-              
+
       }
 
       else
@@ -27,9 +29,9 @@ struct rec *insert(struct rec *head,int data)
                head = node;
           }
 
-          
+
           else
-          
+
           while(tmp!=NULL)
           {
                if(tmp->next == NULL)
@@ -47,13 +49,13 @@ struct rec *insert(struct rec *head,int data)
                else
                tmp = tmp->next;
           }
-          
+
       }
-    
+
       return head;
-       
+
     }
-    
+
 
 void print(struct rec *tmp)
 {
@@ -82,7 +84,7 @@ int menu()
 
 
 int main()
-{  
+{
     struct rec *tmp,*node,*head=NULL;
     int x,a;
     x=menu();
@@ -94,7 +96,7 @@ int main()
             scanf("%d",&a);
             head=insert(head,a);
             x=menu();
-                 
+
          }
          else if(x==2)
          {
@@ -121,13 +123,13 @@ int main()
                   break;
                   }
               }
-              
+
               printf("\n");
               x=menu();
          }
          else if(x==4)
          {
-               print(head); 
+               print(head);
                printf("\n");
                x=menu();
          }
